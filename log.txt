@@ -1,0 +1,102 @@
+2012-09-26T22:34:15+00:00 heroku[router]: GET wttd-anderson.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=1055
+2012-09-26T22:34:15+00:00 app[web.1]: Traceback (most recent call last):
+2012-09-26T22:34:15+00:00 app[web.1]:   File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 85, in run
+2012-09-26T22:34:15+00:00 app[web.1]:     self.result = application(self.environ, self.start_response)
+2012-09-26T22:34:15+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 241, in __call__
+2012-09-26T22:34:15+00:00 app[web.1]:     response = self.get_response(request)
+2012-09-26T22:34:15+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 179, in get_response
+2012-09-26T22:34:15+00:00 app[web.1]:     response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+2012-09-26T22:34:15+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 228, in handle_uncaught_exception
+2012-09-26T22:34:15+00:00 app[web.1]:     return callback(request, **param_dict)
+2012-09-26T22:34:15+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+2012-09-26T22:34:15+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/views/defaults.py", line 32, in server_error
+2012-09-26T22:34:15+00:00 app[web.1]:     response = view_func(request, *args, **kwargs)
+2012-09-26T22:34:15+00:00 app[web.1]:     t = loader.get_template(template_name) # You need to create a 500.html template.
+2012-09-26T22:34:15+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+2012-09-26T22:34:15+00:00 app[web.1]:     template, origin = find_template(template_name)
+2012-09-26T22:34:15+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 138, in find_template
+2012-09-26T22:34:15+00:00 app[web.1]:     raise TemplateDoesNotExist(name)
+2012-09-26T22:34:15+00:00 app[web.1]: TemplateDoesNotExist: 500.html
+2012-09-26T22:34:15+00:00 app[web.1]: [26/Sep/2012 17:34:15] "GET /static/css/style.css HTTP/1.1" 500 59
+2012-09-26T22:34:15+00:00 heroku[router]: GET wttd-anderson.herokuapp.com/static/css/style.css dyno=web.1 queue=0 wait=0ms service=9ms status=500 bytes=59
+2012-09-26T22:34:16+00:00 app[web.1]: Traceback (most recent call last):
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 85, in run
+2012-09-26T22:34:16+00:00 app[web.1]:     self.result = application(self.environ, self.start_response)
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 241, in __call__
+2012-09-26T22:34:16+00:00 app[web.1]:     response = self.get_response(request)
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 179, in get_response
+
+2012-09-26T22:34:16+00:00 app[web.1]:     response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 228, in handle_uncaught_exception
+2012-09-26T22:34:16+00:00 app[web.1]:     t = loader.get_template(template_name) # You need to create a 500.html template.
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/views/defaults.py", line 32, in server_error
+2012-09-26T22:34:16+00:00 app[web.1]:     return callback(request, **param_dict)
+2012-09-26T22:34:16+00:00 app[web.1]:     response = view_func(request, *args, **kwargs)
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+2012-09-26T22:34:16+00:00 app[web.1]:     template, origin = find_template(template_name)
+2012-09-26T22:34:16+00:00 heroku[router]: GET wttd-anderson.herokuapp.com/static/js/site.js dyno=web.1 queue=0 wait=0ms service=8ms status=500 bytes=59
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 138, in find_template
+2012-09-26T22:34:16+00:00 app[web.1]:     raise TemplateDoesNotExist(name)
+2012-09-26T22:34:16+00:00 app[web.1]: TemplateDoesNotExist: 500.html
+2012-09-26T22:34:16+00:00 app[web.1]: [26/Sep/2012 17:34:16] "GET /static/js/site.js HTTP/1.1" 500 59
+2012-09-26T22:34:16+00:00 app[web.1]: Traceback (most recent call last):
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 85, in run
+2012-09-26T22:34:16+00:00 app[web.1]:     self.result = application(self.environ, self.start_response)
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 241, in __call__
+2012-09-26T22:34:16+00:00 app[web.1]:     response = self.get_response(request)
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 179, in get_response
+2012-09-26T22:34:16+00:00 app[web.1]:     response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 228, in handle_uncaught_exception
+2012-09-26T22:34:16+00:00 app[web.1]:     response = view_func(request, *args, **kwargs)
+2012-09-26T22:34:16+00:00 app[web.1]:     return callback(request, **param_dict)
+2012-09-26T22:34:16+00:00 app[web.1]:     t = loader.get_template(template_name) # You need to create a 500.html template.
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/views/defaults.py", line 32, in server_error
+2012-09-26T22:34:16+00:00 app[web.1]:     template, origin = find_template(template_name)
+2012-09-26T22:34:16+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 138, in find_template
+2012-09-26T22:34:16+00:00 app[web.1]:     raise TemplateDoesNotExist(name)
+2012-09-26T22:34:16+00:00 app[web.1]: TemplateDoesNotExist: 500.html
+2012-09-26T22:34:16+00:00 app[web.1]: [26/Sep/2012 17:34:16] "GET /static/img/80x15-django-powered.png HTTP/1.1" 500 59
+2012-09-26T22:34:16+00:00 heroku[router]: GET wttd-anderson.herokuapp.com/static/img/80x15-django-powered.png dyno=web.1 queue=0 wait=0ms service=9ms status=500 bytes=59
+2012-09-26T22:34:17+00:00 app[web.1]: Traceback (most recent call last):
+2012-09-26T22:34:17+00:00 app[web.1]:   File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 85, in run
+2012-09-26T22:34:17+00:00 app[web.1]:     self.result = application(self.environ, self.start_response)
+2012-09-26T22:34:17+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 241, in __call__
+2012-09-26T22:34:17+00:00 app[web.1]:     response = self.get_response(request)
+2012-09-26T22:34:17+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 179, in get_response
+2012-09-26T22:34:17+00:00 app[web.1]:     response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+2012-09-26T22:34:17+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 228, in handle_uncaught_exception
+2012-09-26T22:34:17+00:00 app[web.1]:     return callback(request, **param_dict)
+2012-09-26T22:34:17+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+2012-09-26T22:34:17+00:00 app[web.1]:     response = view_func(request, *args, **kwargs)
+2012-09-26T22:34:17+00:00 app[web.1]:     t = loader.get_template(template_name) # You need to create a 500.html template.
+2012-09-26T22:34:17+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/views/defaults.py", line 32, in server_error
+2012-09-26T22:34:17+00:00 app[web.1]:     template, origin = find_template(template_name)
+2012-09-26T22:34:17+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+2012-09-26T22:34:17+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 138, in find_template
+2012-09-26T22:34:17+00:00 app[web.1]: TemplateDoesNotExist: 500.html
+2012-09-26T22:34:17+00:00 app[web.1]:     raise TemplateDoesNotExist(name)
+2012-09-26T22:34:17+00:00 app[web.1]: [26/Sep/2012 17:34:17] "GET /static/img/party-rock.jpg HTTP/1.1" 500 59
+2012-09-26T22:34:17+00:00 heroku[router]: GET wttd-anderson.herokuapp.com/static/img/party-rock.jpg dyno=web.1 queue=0 wait=0ms service=8ms status=500 bytes=59
+2012-09-26T22:34:21+00:00 app[web.1]: Traceback (most recent call last):
+2012-09-26T22:34:21+00:00 app[web.1]:   File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 85, in run
+2012-09-26T22:34:21+00:00 app[web.1]:     self.result = application(self.environ, self.start_response)
+2012-09-26T22:34:21+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 241, in __call__
+2012-09-26T22:34:21+00:00 app[web.1]:     response = self.get_response(request)
+2012-09-26T22:34:21+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 179, in get_response
+2012-09-26T22:34:21+00:00 app[web.1]:     response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+2012-09-26T22:34:21+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 228, in handle_uncaught_exception
+2012-09-26T22:34:21+00:00 app[web.1]:     response = view_func(request, *args, **kwargs)
+2012-09-26T22:34:21+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/views/defaults.py", line 32, in server_error
+2012-09-26T22:34:21+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+2012-09-26T22:34:21+00:00 app[web.1]:     return callback(request, **param_dict)
+2012-09-26T22:34:21+00:00 app[web.1]:     t = loader.get_template(template_name) # You need to create a 500.html template.
+2012-09-26T22:34:21+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+2012-09-26T22:34:21+00:00 app[web.1]:     template, origin = find_template(template_name)
+2012-09-26T22:34:21+00:00 heroku[router]: GET wttd-anderson.herokuapp.com/static/img/party-rock.jpg dyno=web.1 queue=0 wait=0ms service=8ms status=500 bytes=59
+2012-09-26T22:34:21+00:00 app[web.1]:   File "/app/.heroku/venv/lib/python2.7/site-packages/django/template/loader.py", line 138, in find_template
+2012-09-26T22:34:21+00:00 app[web.1]:     raise TemplateDoesNotExist(name)
+2012-09-26T22:34:21+00:00 app[web.1]: TemplateDoesNotExist: 500.html
+2012-09-26T22:34:21+00:00 app[web.1]: [26/Sep/2012 17:34:21] "GET /static/img/party-rock.jpg HTTP/1.1" 500 59
