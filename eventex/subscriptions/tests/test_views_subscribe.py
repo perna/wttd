@@ -50,3 +50,22 @@ class SubscribePostTest(TestCase):
 	def test_save(self):
 		'Valid POST must be saved.'
 		self.assertTrue(Subscription.objects.exists())
+
+
+class SubscribeInvalidPostTest(TestCase):
+	def setUp(self):
+		data = dict(name='Anderson Meira', cpf='90877654432',
+					email='andersonmeira@old.com',phone='21-99765432')
+		self.resp = self.client.post('/inscricao/',data)
+
+	def test_post(self):
+		'Valid POST should redirect to /inscricao/1/'
+		self.assertEqual(200,self.resp.status_code)
+
+	def test_form_errors(self):
+		'Form must contain errors.'
+		self.assertTrue(self.resp.context['form'].errors)
+
+	def test_dont_save(self):
+		'Do not save data.'
+		self.assertFalse(Subscription.objects.exists())
