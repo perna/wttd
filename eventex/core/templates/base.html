@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>EventeX</title>
+	<link type='text/css' href='{{ STATIC_URL }}css/style.css' rel='stylesheet' media='screen' />
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.2.min.js'></script>
+	<script type='text/javascript' src='{{ STATIC_URL }}js/site.js'></script>
+</head>
+<body>
+	<div id='site'>
+		<div id='content'>
+			{% block content %}
+			{% endblock content %}	
+		</div>	
+	</div>
+	<div id='footer'>
+			EventeX 2012 | <a href='https://www.djangoproject.com/'><img src='{{ STATIC_URL }}img/80x15-django-powered.png' alt='powered by django' /></a>
+	</div>
+</body>
+</html>
